@@ -1,5 +1,5 @@
-import { connect } from 'mongoose'
+const mongoose= require('mongoose')
 
-connect(`mongodb+srv://rajat:idream@cluster0.kpqqm35.mongodb.net/?retryWrites=true&w=majority`)
+module.exports= mongoose.connect(`mongodb+srv://rajat:idream@cluster0.kpqqm35.mongodb.net/?retryWrites=true&w=majority`)
 
 
