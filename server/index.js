@@ -11,4 +11,10 @@ app.use(express.json())
 app.use(cors());
 app.use(apiRoutes)
 
+
+//testing backend remote server
+app.get('/',(req,res)=>{
+    res.send('ok')
+})
+
 app.listen(port)
