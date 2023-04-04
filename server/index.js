@@ -2,7 +2,7 @@ const express=require('express')
 const app = express()
 const conn=require('./connection/connect')
 const apiRoutes=require('./routes/api')
-const cors = require("cors");
+const cors = require('cors');
 
 let port = process.env.PORT ||  5500;
 
