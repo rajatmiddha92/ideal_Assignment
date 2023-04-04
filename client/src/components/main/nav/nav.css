@@ -1,0 +1,19 @@
+.nav{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.part-1{
+    display: flex;
+    gap:3rem;
+    width: 60%;
+}
+.inp{
+    border-radius: 20px;
+    padding: 1rem;
+    width: 40%;
+    font-size: 1.2rem;
+}
+.btn{
+    margin-top: 1rem;
+}

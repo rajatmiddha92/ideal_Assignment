@@ -1,0 +1,39 @@
+.popup{
+    display:flex;
+    justify-content: center;
+    position:fixed;
+    width: 100%;
+    top:30%;
+   
+
+}
+.main-popup{
+    box-shadow: 1px 8px 20px grey;
+    background-color: white;
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+.heading-photo{
+    margin-bottom:2rem;
+}
+.label{
+    font-weight: bold;
+}
+.label-details{
+    margin-top: .5rem;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 80%;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    border:0.2px solid grey
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    gap:1rem;
+}
+
