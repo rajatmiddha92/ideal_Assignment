@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
 
-mongoose.connect(`mongodb+srv://rajatmiddha92:idealcareers@cluster0.rjdeags.mongodb.net/?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://rajat:idream@cluster0.kpqqm35.mongodb.net/?retryWrites=true&w=majority`)
 
 
