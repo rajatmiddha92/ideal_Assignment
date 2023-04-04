@@ -28,20 +28,18 @@ router.get('/search/:key',async(req,res)=>{
 })
 
 //add data
-router.post('/adddata',async(req,res)=>{
-    const {label,photourl} = req.body
-    if(!label || !photourl)
-    {
-        return res.status(400).json({message:"details are missing"})
+router.post('/adddata', async (req, res) => {
+    const { label, photourl } = req.body;
+    if (!label || !photourl) {
+      return res.status(400).json({ message: 'details are missing' });
     }
-    try{
-        let newdata=await Data.create({label,photourl})
-        return res.status(201).json({newdata})
+    try {
+      let newdata = await Data.create({ label, photourl });
+      return res.status(201).json({ newdata });
+    } catch (e) {
+      return res.status(400).json({ message: e.message });
     }
-    catch(e){
-        return res.status(400).json({message: err.message})
-    }
-})
+  });
 
 
 router.delete('/deletedata/:id',async(req,res)=>{

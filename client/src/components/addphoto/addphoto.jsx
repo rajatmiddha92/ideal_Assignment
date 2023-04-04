@@ -12,14 +12,18 @@ const Addphoto=({display,setDisplay,fetchData})=>{
 
      const handleAdddata=async()=>{
         try{
+     
          let res=await axios.post(`https://idealcareers.onrender.com/adddata`,{label:data.label,photourl:data.photourl})
+         console.log(res)
+         console.log('hi2')
+         console.log(data.label,data.photourl)
          fetchData()
          setData({label:'',photourl:''})
          setError(false)
          setDisplay(false)
         }
         catch(err){
-            if(err){
+            if(err.response){
                 setError(true)
             }
         }
@@ -32,9 +36,9 @@ const Addphoto=({display,setDisplay,fetchData})=>{
         {error ? <h1 style={{color:'red'}}>Details are missing</h1> : " "}
         <label className='label' htmlFor='label'>Label</label>
         <div>
-        <input onChange={(e)=>setData({...data,label:e.target.value})} className='label-details' placeholder='Enter the label Here...' id='label'/>
+        <input value={data.label} onChange={(e)=>setData({...data,label:e.target.value})} className='label-details' placeholder='Enter the label Here...' id='label'/>
         </div>
-        <label className='label' htmlFor='photo'>Photo URL</label>
+        <label value={data.photourl} className='label' htmlFor='photo'>Photo URL</label>
         <div>
         <input onChange={(e)=>setData({...data,photourl:e.target.value})} className='label-details' placeholder='Enter the URL Here...' id='photo'/>
         </div>
