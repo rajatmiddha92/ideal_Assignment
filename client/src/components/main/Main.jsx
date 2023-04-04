@@ -2,7 +2,7 @@ import { useEffect,useState } from "react"
 import axios from 'axios'
 import '../main/main.css'
 import Button from '@mui/material/Button';
-import Addphoto from "../../addphoto/addphoto";
+import Addphoto from '../addphoto/addphoto'
 
 
 const Main = ({data,setData,fetchData,display,setDisplay}) => {
@@ -32,7 +32,7 @@ const Main = ({data,setData,fetchData,display,setDisplay}) => {
 
   const handledelete=async(id)=>{
   
-    const data=await axios.delete(`http://localhost:5500/deletedata/${id}`)
+    const data=await axios.delete(`https://idealcareers.onrender.com/${id}`)
   fetchData()
   }
 

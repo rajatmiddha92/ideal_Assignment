@@ -12,7 +12,7 @@ const Addphoto=({display,setDisplay,fetchData})=>{
 
      const handleAdddata=async()=>{
         try{
-         let res=await axios.post(`http://localhost:5500/adddata`,{label:data.label,photourl:data.photourl})
+         let res=await axios.post(`https://idealcareers.onrender.com/adddata`,{label:data.label,photourl:data.photourl})
          fetchData()
          setData({label:'',photourl:''})
          setError(false)

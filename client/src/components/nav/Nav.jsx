@@ -10,7 +10,7 @@ const Nav = ({data,setData,fetchData,display,setDisplay}) => {
 
   const handleSearch = async () => {
     try {
-      const res = await axios.get(`http://localhost:5500/search/${searchKey}`);
+      const res = await axios.get(`https://idealcareers.onrender.com/${searchKey}`);
       setData(res.data.result)
     } catch (err) {
       console.error(err);
