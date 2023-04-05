@@ -32,7 +32,7 @@ const Main = ({data,setData,fetchData,display,setDisplay}) => {
 
   const handledelete=async(id)=>{
   
-    const data=await axios.delete(`https://idealcareers.onrender.com/${id}`)
+    const data=await axios.delete(`https://idealcareers.onrender.com/deletedata/${id}`)
   fetchData()
   }
 
